@@ -1,0 +1,60 @@
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+footer > * {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-align: center;    
+}
+@media (min-width: 600px) {
+    footer {
+        display: grid;
+        grid-template-columns: 3fr 2fr 3fr;
+        grid-template-areas:
+            "pub legal credits"
+            "some legal credits"
+            "copyright copyright copyright";
+        column-gap: 0;
+    }
+    footer > * {
+        width: 100%;
+    }
+    #keapublishing {
+        grid-area: pub;
+    }
+    #some {
+        grid-area: some;
+        text-align: left;
+    }
+    #legal {
+        grid-area: legal;
+        text-align: center;
+    }
+    #credits {
+        grid-area: credits;
+        text-align: right;
+    }
+    footer > p {
+        grid-area: copyright;
+    }
+    #keapublishing > a > * {
+        display: block;
+        text-align: left;
+    }
+}
+#keapublishing * {
+    vertical-align: middle;
+}
+#legal > * {
+    display: block;
+}
+
+.top {
+    width: 100%;
+    text-align: right;
+    padding-right: 2rem;
+    margin-top: -0.5rem;
+}
